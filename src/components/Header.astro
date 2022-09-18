@@ -1,0 +1,39 @@
+---
+export interface Props {
+  name: string,
+  index: string
+}
+
+const { name, index } = Astro.props as Props
+---
+
+<header>
+  <span class="name">
+    {name}
+  </span>
+
+  <span class="index">
+    index: {index}
+  </span>
+</header>
+
+<style>
+  header {
+    width: 100%;
+    padding: .6rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: .125rem;
+    box-shadow: var(--glow);
+    z-index: 4;
+  }
+  
+  .name {
+    font-size: 1.6rem;
+  }
+</style>
